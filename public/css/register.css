@@ -1,0 +1,50 @@
+.card-header{
+    background:#1c478e !important;
+    color:#ffff;
+    font-weight: 800 !important;
+ 
+}
+.col-md-6.offset-md-4{
+    display: flex !important;
+    flex-direction: column !important;
+    flex:1 !important;
+}
+button.btn.btn-primary{
+    background:#1c478e !important;
+    color: #fff !important;
+}
+
+.register{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.image{
+    object-fit: contain;
+    width: 60%;
+    height: auto;
+    flex: 0.1;
+}
+.register__form{
+    flex: 0.9 !important;
+    width: 100% !important;
+    height: 100vh;
+}
+@media(max-width:965px){
+    .register{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .register__form, .image{
+        flex:1 !important;
+        object-fit:contain !important;
+        width:100%  !important;
+
+    }
+    .register__form{
+        z-index: 10;
+    }
+    .image{
+        margin-bottom: -250px;
+        z-index: 1;
+    }
+}

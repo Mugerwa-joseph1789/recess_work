@@ -1,0 +1,74 @@
+.money_background{
+    background: #bdc3c7;
+    margin-top: -25px;
+}
+.tab{
+    text-align: center;
+    background: #1c478e;
+    color:#fff;
+    border-radius: 999px;
+    width: 100%;
+    padding: 8px;
+    font-weight: 800;
+}
+.tab-money{
+    text-align: center;
+    background:black;
+    color:#fff;
+    border-radius: 999px;
+    width: 100%;
+    padding: 10px;
+    height: fit-content;
+    font-weight: 900;
+
+}
+.footer{
+    margin-top: 4rem;
+    padding: 10px;
+    text-align: center;
+}
+.footer>a{
+    text-decoration:none;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+table.table.table-striped.table-dark:hover{
+    cursor: pointer !important;
+}
+small{
+    font-weight: bold;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+}
+.inputs>input{
+  width: 100%;
+  flex: 1;
+}
+span.invalid-feedback{
+    text-align: center !important;
+}
+.invalid{
+    color:#e3342f !important;
+}
+.form-group{
+    display: flex !important;
+    flex-direction: column ;
+    flex: 1;
+}
+button.btn.btn-primary{
+    flex: 1 !important;
+    background: #1c478e !important;
+    margin-left: 10px !important;
+    margin-right: 8px !important;
+}
+.label{
+  text-align: center;
+  font-weight: bold;
+  margin-top:12px;
+  padding-top: 15px;
+
+}
+

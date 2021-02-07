@@ -1,0 +1,43 @@
+.black{
+    background: #bdc3c7;
+}
+.patients{
+    text-align: center;
+    font-weight: 800;
+    padding: 10px;
+    margin: 10px;
+}
+.tab{
+    text-align: left;
+    background: wheat;
+    color:black;
+    border-radius: 999px;
+    width: 35%;
+    padding: 8px;
+    font-weight: 800;
+}
+.tab-patients{
+    text-align: right;
+    background:white;
+    color:black;
+    border-radius: 999px;
+    width: 10%;
+    padding: 10px;
+    height: fit-content;
+    font-weight: 900;
+
+}
+table.table.table-striped.table-dark:hover{
+    cursor: pointer !important;
+}
+.footer{
+    margin-top: 4rem;
+    padding: 10px;
+    text-align: center;
+}
+.footer>a{
+    text-decoration:none;
+
+    cursor: pointer;
+    font-weight: bold;
+}

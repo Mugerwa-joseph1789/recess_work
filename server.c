@@ -275,6 +275,7 @@ void add_patient_list(void){
     char stop,s1[20],s2[]="F",s3[]="M";
     char a1[20],a2[20],a3[20],a4[20];
     char d1[20],d2[20];
+    char q1[20],q2[20],p1[]="not",p2[]="yes";
     int loop;
     puts("\t\n------- ENTER_PATIENT_INFORMATION ------\n");
     for (loop = number_of_patients; loop <= MAX_PATIENTS; loop++)
@@ -328,10 +329,30 @@ void add_patient_list(void){
           strcpy(patients[loop].DOI,d1);
           break;
          }
-        puts("Asymptomatic/NotAsymptomatic");
-        scanf("%s", patients[loop].status);
+         
+        while(1){
+         puts("Asymptomatic/NotAsymptomatic. Please enter not for NotAsypmtomatic or yes for Asymptomatic");
+         scanf("%s",q1);
+         puts("Please re-enter condition");
+         scanf("%s",q2);
+         if(strcmp(q1,p1)!=0 && strcmp(q1,p2)!=0){
+		        puts("Error,repeat");
+		        continue;
+         }
+         else if(strcmp(q2,a2)!=0 && strcmp(q2,a1)!=0){
+	        	puts("Error,repeat");
+	        	continue;
+         }
+         else if(strcmp(q1,q2)!=0){
+		        continue;
+         }
+         else{
+          strcpy(patients[loop].status,q1)
+         }
+        }
                  number_of_patients += 1;
-        puts("More patients y/n?");
+         printf("\n");
+         puts("More patients y/n?");
         scanf(" %c", &stop);
         if (stop == 'n' || stop == 'N'){
             break;

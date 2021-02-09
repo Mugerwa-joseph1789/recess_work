@@ -273,6 +273,7 @@ void add_patient_list(void){
     scanf("%s", User_name);
     char stop,s1[20],s2[]="F",s3[]="M";
     char a1[20],a2[20],a3[20],a4[20];
+    char d1[20],d2[20];
     int loop;
     puts("\t\n------- ENTER_PATIENT_INFORMATION ------\n");
     for (loop = number_of_patients; loop <= MAX_PATIENTS; loop++)
@@ -304,9 +305,28 @@ void add_patient_list(void){
           break;
          }
         }
-        puts("Input Date:format 01/25/2021");
-        scanf("%s", patients[loop].DOI);
-        
+               
+        while(1){
+         puts("Input Date:format 01/25/2021");
+         scanf("%s", d1);
+         puts("Re-enter date for verification");
+         scanf("%s",d2);
+         if(strcmp(d1,d2)!=0){
+          puts("Error,repeat the date");
+          continue;
+         }
+         else if(ispunct(d1[2])==0 || ispunct(d1[5])==0){
+          puts("Error,repeat the date");
+          continue;
+        }
+         else if(strlen(a1)!=10){
+          puts("Error, repeat the date");
+          continue;
+         }
+         else{
+          strcpy(patients[loop].DOI,d1);
+          break;
+         }
         puts("Asymptomatic/NotAsymptomatic");
         scanf("%s", patients[loop].status);
                  number_of_patients += 1;

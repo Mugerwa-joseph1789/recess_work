@@ -272,13 +272,27 @@ void add_patient_list(void){
     printf("USERNAME");
     scanf("%s", User_name);
     char stop,s1[20],s2[]="F",s3[]="M";
+    char a1[20],a2[20],a3[20],a4[20];
     int loop;
     puts("\t\n------- ENTER_PATIENT_INFORMATION ------\n");
     for (loop = number_of_patients; loop <= MAX_PATIENTS; loop++)
     {
-        puts("Name of patient. (BOTH NAMES)");
-        scanf("%s %s", patients[loop].patient_fname,patients[loop].patient_sname);
-
+        while(1){
+         puts("Name of patient. (BOTH NAMES)");
+         scanf("%s %s", a1,a2);
+         puts("Please re-enter names in order for verification");
+         scanf("%s %s",a3,a4");
+         if(strcmp(a1,a3)!=0 || strcmp(a2,a4)!=0){
+          puts("Error, repeat the names");
+          continue;
+         }
+         else{
+          strcpy(patients[loop].patient_fname,a1);
+          strcpy(patients[loop].patient_sname,a2);
+          break;
+         }
+         }
+               
         while(1){
          puts("Gender_of_patient [F or M]");
          scanf("%s",s1);

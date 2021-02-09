@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <time.h>
+#include <ctype.h>
 
 #define MAX_PATIENTS 100
 

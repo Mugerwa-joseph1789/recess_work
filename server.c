@@ -286,7 +286,7 @@ void add_patient_list(void){
           continue;
          }
          else{
-          patients[loop].patient_gender=s1;
+          strcpy(patients[loop].patient_gender,s1);
           break;
          }
         }

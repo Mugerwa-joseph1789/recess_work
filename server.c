@@ -282,7 +282,7 @@ void add_patient_list(void){
          scanf("%s %s", a1,a2);
          puts("Please re-enter names in order for verification");
          scanf("%s %s",a3,a4");
-         if(strcmp(a1,a3)!=0 || strcmp(a2,a4)!=0){
+         if(strcmp(a1,a3)!=0 && strcmp(a2,a4)!=0){
           puts("Error, repeat the names");
           continue;
          }

@@ -271,7 +271,7 @@ void add_patient_list(void){
 
     printf("USERNAME");
     scanf("%s", User_name);
-    char stop;
+    char stop,s1[20],s2[]="F",s3[]="M";
     int loop;
     puts("\t\n------- ENTER_PATIENT_INFORMATION ------\n");
     for (loop = number_of_patients; loop <= MAX_PATIENTS; loop++)
@@ -279,9 +279,17 @@ void add_patient_list(void){
         puts("Name of patient. (BOTH NAMES)");
         scanf("%s %s", patients[loop].patient_fname,patients[loop].patient_sname);
 
-        puts("Gender_of_patient [F or M]");
-        scanf("%s", patients[loop].patient_gender);
-
+        while(1){
+         puts("Gender_of_patient [F or M]");
+         scanf("%s",s1);
+         if(strcmp(s1,s2)!=0 || strcmp(s1,s3)!=0){
+          continue;
+         }
+         else{
+          patients[loop].patient_gender=s1;
+          break;
+         }
+        }
         puts("Input Date:format 01/25/2021");
         scanf("%s", patients[loop].DOI);
         

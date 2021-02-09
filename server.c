@@ -284,7 +284,7 @@ void add_patient_list(void){
          puts("Name of patient. (BOTH NAMES)");
          scanf("%s %s", a1,a2);
          puts("Please re-enter names in order for verification");
-         scanf("%s %s",a3,a4");
+         scanf("%s %s",a3,a4);
          if(strcmp(a1,a3)!=0 && strcmp(a2,a4)!=0){
           puts("Error, repeat the names");
           continue;
@@ -299,7 +299,8 @@ void add_patient_list(void){
         while(1){
          puts("Gender_of_patient [F or M]");
          scanf("%s",s1);
-         if(strcmp(s1,s2)!=0 || strcmp(s1,s3)!=0){
+         if(strcmp(s1,s2)!=0 && strcmp(s1,s3)!=0){
+          printf("Re-input gender");
           continue;
          }
          else{
@@ -321,7 +322,7 @@ void add_patient_list(void){
           puts("Error,repeat the date");
           continue;
         }
-         else if(strlen(a1)!=10){
+         else if(strlen(a1)>10){
           puts("Error, repeat the date");
           continue;
          }
@@ -329,6 +330,7 @@ void add_patient_list(void){
           strcpy(patients[loop].DOI,d1);
           break;
          }
+	}
          
         while(1){
          puts("Asymptomatic/NotAsymptomatic. Please enter not for NotAsypmtomatic or yes for Asymptomatic");
@@ -339,15 +341,9 @@ void add_patient_list(void){
 		        puts("Error,repeat");
 		        continue;
          }
-         else if(strcmp(q2,a2)!=0 && strcmp(q2,a1)!=0){
-	        	puts("Error,repeat");
-	        	continue;
-         }
-         else if(strcmp(q1,q2)!=0){
-		        continue;
-         }
          else{
-          strcpy(patients[loop].status,q1)
+          strcpy(patients[loop].status,q1);
+	  break; 
          }
         }
                  number_of_patients += 1;

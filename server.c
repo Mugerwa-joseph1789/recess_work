@@ -349,7 +349,6 @@ void add_patient_list(void){
          }
          else{
           strcpy(patients[loop].status,q1);
-          printf("this uishhg bth %s",patients[loop].status);
 	  break; 
          }
         }

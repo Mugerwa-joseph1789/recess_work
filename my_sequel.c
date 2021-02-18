@@ -44,7 +44,6 @@ int main(){
          while(!feof(file)){
                fscanf(file,"%s %s %s %s %s %s \n",details[flag].patient_fname,details[flag].patient_sname,details[flag].patient_gender,details[flag].DOI,details[flag].status,details[flag].User_name);
 				sprintf(sql,"INSERT INTO `Covid_cases`( patient_fname,patient_sname,patient_gender,DOI,status,User_name)VALUES('%s','%s','%s','%s','%s','%s');",details[flag].patient_fname,details[flag].patient_sname,details[flag].patient_gender,details[flag].DOI,details[flag].status,details[flag].User_name);
-			    printf("%s",sql);
                 flag++;
         }; 
 		

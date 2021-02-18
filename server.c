@@ -276,7 +276,7 @@ void add_patient_list(void){
  void add_patient(void){
    
 
-    printf("USERNAME");
+    puts("USERNAME");
     scanf("%s", User_name);
     char stop,s1[20],s2[]="F",s3[]="M";
     char a1[20],a2[20],a3[20],a4[20];

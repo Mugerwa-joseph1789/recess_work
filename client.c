@@ -15,7 +15,7 @@ int sockfd, n;
 struct sockaddr_in serv_addr;
 struct hostent *server;
 char buffer[256];
-socklen_t portno = 4000;
+socklen_t portno = 5000;
 char district_name[30];
 
 
@@ -80,7 +80,7 @@ int main(int argc, char *argv[]){
     bzero((char *)&serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
     bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
-    serv_addr.sin_port = htons(4000);
+    serv_addr.sin_port = htons(5000);
     //connect to server with server address which is set above (serv_addr)
 
     if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {

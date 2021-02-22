@@ -90,7 +90,7 @@ char *process_operation(char *input){
 int main(int argc, char *argv[]){
     //  sick_file = fopen("patients.txt", "a+");
 
-    const uint16_t port_number = 4000;
+    const uint16_t port_number = 5000;
     int server_fd = socket(AF_INET, SOCK_STREAM, 0);
 
     struct sockaddr_in *server_sockaddr = init_sockaddr_in(port_number);
